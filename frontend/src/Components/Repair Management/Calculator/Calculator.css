@@ -1,0 +1,110 @@
+.calc-main {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(204, 202, 202);
+}
+
+.calc-form .calc-btn {
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 3px;
+    font-size: 20px;
+    font-weight: normal;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.calc-form .calc-btn:hover {
+    background-color: rgb(179, 178, 178);
+    color: #000000;
+}
+
+.calc-form .calc-input-display {
+    width: 200px;
+    display: flex;
+    text-align: right;
+    justify-content: flex-end;
+    flex: 1;
+    padding: 5px 10px;
+    font-size: 20px;
+    background-color: rgb(179, 178, 178);
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+}
+
+.calc-btn-equal {
+    width: 106px;
+    color: #ffffff;
+}
+
+/* Calculator Container - Initially Hidden */
+.calc-container {
+    position: fixed;
+    bottom: -100%; /* Hidden initially */
+    right: 20px;
+    width: 280px;
+    transition: bottom 0.4s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* When the calculator is visible */
+.calc-container.calc-show {
+    bottom: 20px; /* Visible at bottom-right */
+}
+
+/* Floating button to toggle calculator */
+.calc-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Button hover effect */
+.calc-toggle-btn:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+/* Close button inside calculator */
+.calc-close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Close button hover effect */
+.calc-close-btn:hover {
+    background-color: #333;
+}
+
+.calc-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calc-display {
+    margin: 3px;
+}

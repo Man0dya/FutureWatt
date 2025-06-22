@@ -1,0 +1,115 @@
+/* Repair Request Container */
+.repair-request-container {
+  margin-top: 100px;
+  min-height: 100vh;
+  background: #f4f4f4;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Repair Request Box */
+.repair-request-box {
+  max-width: 650px;
+  width: 100%;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Title Styling */
+.repair-request-box h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Form Styling */
+.repair-request-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #444;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  color: #444;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Submit Button */
+.repair-request-box button {
+  font-size: 1.2rem;
+  padding: 14px;
+  background: orange;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  margin-top: 20px;
+}
+
+.repair-request-box button:hover {
+  background-color: darkorange;
+  transform: translateY(-2px);
+}
+
+.repair-request-box button:active {
+  transform: translateY(0);
+}
+
+/* Confirmation and Error Messages */
+.confirmation-message {
+  font-size: 1.2rem;
+  color: #28a745;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 1rem;
+  margin-top: 15px;
+  text-align: center;
+  background-color: #ffe5e7;
+  padding: 10px;
+  border-radius: 5px;
+}

@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#fw-contact-main-container {
+  max-width: 1400px;
+  margin: 100px auto 20px;
+  padding: 30px;
+  font-family: "League Spartan", sans-serif;
+}
+
+#fw-contact-page-title {
+  font-size: 2.8rem;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff5733, black, #ffc300, black);
+  background-size: 300% 300%;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textColorChange 16s ease infinite, fadeInUp 0.6s ease-out forwards;
+}
+
+#fw-contact-intro-text {
+  font-size: 1.5rem;
+  color: #7f8c8d;
+  margin-bottom: 50px;
+  text-align: center;
+  font-style: italic;
+  animation: fadeInUp 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+#fw-contact-info-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  flex: 1;
+  min-width: 280px;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 200px;
+  opacity: 0;
+}
+
+#fw-contact-email-item { animation: fadeIn 0.6s ease-out 0.4s forwards; }
+#fw-contact-website-item { animation: fadeIn 0.6s ease-out 0.7s forwards; }
+#fw-contact-mobile-item { animation: fadeIn 0.6s ease-out 1.0s forwards; }
+#fw-contact-address-item { animation: fadeIn 0.6s ease-out 1.3s forwards; }
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.contact-icon {
+  font-size: 3.5rem;
+  color: #ff6600;
+  transition: color 0.3s ease;
+}
+
+.contact-item:hover .contact-icon { color: #e65c00; }
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-content .label {
+  font-weight: 700;
+  color: #000000;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#fw-contact-email-item a,
+#fw-contact-website-item a {
+  color: #2980b9;
+  text-decoration: none;
+  font-size: 1.4rem;
+  word-break: break-word;
+}
+
+#fw-contact-mobile-item span:last-child,
+#fw-contact-address-item span:last-child {
+  color: #2980b9;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+#fw-contact-email-item a:hover,
+#fw-contact-website-item a:hover {
+  color: #3498db;
+  text-decoration: underline;
+}
+
+#fw-contact-form-map-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.form-title {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 10px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff5733, black, #ffc300, black);
+  background-size: 300% 300%;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textColorChange 16s ease infinite, fadeInUp 0.6s ease-out 1.6s forwards;
+  opacity: 0;
+}
+
+.form-subtitle {
+  font-size: 1.3rem;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.6s ease-out 1.8s forwards;
+  opacity: 0;
+}
+
+.form-map-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.form-container {
+  flex: 1;
+  min-width: 400px;
+  background: #f9f9f9;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  animation: fadeInUp 0.6s ease-out 2.0s forwards;
+  opacity: 0;
+}
+
+.form-container form { width: 100%; }
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-family: "League Spartan", sans-serif;
+}
+
+.form-textarea {
+  height: 150px;
+  resize: none;
+}
+
+.form-submit {
+  background: #ff6600;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-submit:hover { background: #e65c00; }
+
+.map-container {
+  flex: 1;
+  min-width: 300px;
+  min-height: 460px;
+  background: #e9ecef;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease-out 2.3s forwards;
+  opacity: 0;
+}
+
+/* Popup styles with higher specificity */
+.leaflet-container .custom-popup .leaflet-popup-content-wrapper {
+  background: #ffffff; /* White background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  padding: 10px 15px; /* Padding inside the popup */
+}
+
+.leaflet-container .custom-popup .leaflet-popup-content {
+  font-family: "League Spartan", sans-serif; /* Match your site’s font */
+  font-size: 1.2rem; /* Larger text */
+  color: #333333; /* Dark gray text */
+  font-weight: 600; /* Bold text */
+  margin: 0; /* Remove default margin */
+}
+
+.leaflet-container .custom-popup .leaflet-popup-tip {
+  background: #ffffff; /* Match popup background */
+  border-top: 1px solid #e0e0e0; /* Light border for tip */
+}
+
+.leaflet-container .custom-popup .leaflet-popup-content-wrapper:hover {
+  background: #f9f9f9; /* Light gray on hover */
+}
+
+/* Media Queries */
+@media (max-width: 1000px) {
+  #fw-contact-info-section { flex-direction: column; align-items: center; }
+  .contact-item { width: 90%; max-width: 500px; }
+  .form-map-wrapper { flex-direction: column; align-items: center; }
+  .form-container, .map-container { width: 100%; max-width: 600px; min-height: 400px; }
+}
+
+@media (max-width: 480px) {
+  #fw-contact-page-title { font-size: 2rem; }
+  #fw-contact-intro-text { font-size: 1.2rem; }
+  .contact-item { padding: 25px; min-height: 180px; }
+  .contact-icon { font-size: 2.5rem; }
+  .contact-content .label { font-size: 1.2rem; }
+  #fw-contact-email-item a, #fw-contact-website-item a, 
+  #fw-contact-mobile-item span:last-child, #fw-contact-address-item span:last-child { font-size: 1.2rem; }
+  .form-title { font-size: 1.8rem; }
+  .form-subtitle { font-size: 1.1rem; }
+  .form-container { padding: 30px; min-width: 100%; min-height: 380px; }
+  .form-input, .form-textarea { font-size: 1rem; padding: 12px; }
+  .form-textarea { height: 120px; }
+  .form-submit { font-size: 1rem; padding: 12px 20px; }
+  .map-container { min-height: 380px; }
+}

@@ -1,0 +1,130 @@
+/* Edit Profile Container */
+.edit-profile-container {
+    margin-top: 100px;
+    min-height: 100vh;
+    background: #ffffff;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Edit Profile Box */
+  .edit-profile-box {
+    max-width: 600px;
+    width: 100%;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .edit-profile-box h2 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #ff5733, black, #ffc300, black);
+    background-size: 300% 300%;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: textColorChange 16s ease infinite;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Form Styling */
+  .edit-profile-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-group label {
+    font-size: 18px;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #f9f9f9;
+    color: #444;
+    transition: all 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: darkorange;
+    box-shadow: 0 0 8px rgba(243, 156, 18, 0.3);
+    background: #ffffff;
+  }
+  
+  /* Submit Button */
+  .edit-profile-box button {
+    font-size: 16px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    background: orange;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    margin-top: 20px;
+    align-self: center;
+    min-width: 200px;
+  }
+  
+  .edit-profile-box button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.5);
+    background: darkorange;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    .edit-profile-container {
+      padding: 20px 10px;
+    }
+  
+    .edit-profile-box {
+      padding: 20px;
+    }
+  
+    .edit-profile-box h2 {
+      font-size: 24px;
+    }
+  
+    .form-group label {
+      font-size: 16px;
+    }
+  
+    .form-group input {
+      font-size: 14px;
+      padding: 10px 12px;
+    }
+  
+    .edit-profile-box button {
+      font-size: 14px;
+      padding: 10px 20px;
+      min-width: 150px;
+    }
+  }
+  
+  /* Animation keyframes (if not already defined in your original CSS) */
+  @keyframes textColorChange {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }

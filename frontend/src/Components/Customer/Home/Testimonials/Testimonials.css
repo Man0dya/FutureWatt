@@ -1,0 +1,104 @@
+/* Testimonials Container */
+.testimonial-container {
+  width: 100%;
+  overflow: hidden;
+  background: white;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Testimonials Header */
+.testimonial-header {
+  text-align: center;
+  font-size: 3rem;
+  color: #222;
+  margin-bottom: 30px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff5733, black, #ffc300, black, #ff5733, black, #ffc300);
+  background-size: 600% 600%;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textColorChange 16s ease infinite;
+}
+
+/* Wrapper for the slider */
+.testimonial-slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Testimonials Slider */
+.testimonial-slider {
+  display: flex;
+  width: fit-content;
+  animation: slide 30s linear infinite; /* Changed from 20s to 30s */
+}
+
+.testimonial-slider:hover {
+  animation-play-state: paused;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  flex: 0 0 20%;
+  min-width: 20%;
+  background: white;
+  border-radius: 12px;
+  padding: 50px;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* User Image */
+.user-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+/* Testimonial Text */
+.testimonial-text {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Testimonial Name */
+.testimonial-name {
+  font-weight: bold;
+  color: #222;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Keyframes for Slider Animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Keyframes for Text Color Animation */
+@keyframes textColorChange {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}

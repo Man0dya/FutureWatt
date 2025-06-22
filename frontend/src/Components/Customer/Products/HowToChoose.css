@@ -1,0 +1,135 @@
+/* steps.css */
+:root {
+  --gradient-1: linear-gradient(135deg, #ff5733 0%, #000000 100%);
+  --gradient-2: linear-gradient(135deg, #000000 0%, #ffc300 100%);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --card-height: 200px;
+  --header-height: 100px; /* Adjusted height since button is removed */
+}
+
+.steps-section {
+  width: 100%;
+  padding: 0 2rem;
+  background: #ffffff;
+  min-height: 200vh;
+}
+
+.steps-content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.steps-fixed-header {
+  top: 0;
+  background: #ffffff;
+  padding: 0px 0;
+  text-align: center;
+  z-index: 10;
+  height: var(--header-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.steps-header-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ff5733, black, #ffc300, black);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textColorChange 16s ease infinite;
+}
+
+.steps-header-subtitle {
+  font-size: 1.25rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.steps-cards-container {
+  position: relative;
+  padding-top: 1.1rem;
+}
+
+.steps-card {
+  position: sticky;
+  top: calc(var(--header-height) + (var(--step-index) * 20px));
+  margin-bottom: 1rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 0.5  rem;
+  box-shadow: var(--shadow);
+  height: var(--card-height);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease;
+}
+
+.steps-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.steps-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--step-color);
+}
+
+.steps-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.steps-card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.steps-card-description {
+  max-width: 600px;
+  font-size: 1.1rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.steps-card-number {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 4rem;
+  font-weight: 700;
+  opacity: 0.1;
+  color: #1e293b;
+}
+
+@media (max-width: 768px) {
+  .steps-section {
+    padding: 0 1rem;
+  }
+
+  .steps-fixed-header {
+    padding: 1.5rem 0;
+  }
+
+  .steps-header-title {
+    font-size: 2rem;
+  }
+
+  .steps-card {
+    top: calc(var(--header-height) + (var(--step-index) * 15px));
+    height: calc(var(--card-height) - 20px);
+  }
+}

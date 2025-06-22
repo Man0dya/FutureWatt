@@ -1,0 +1,171 @@
+/* PaymentPage.css */
+.payment-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Subtle gradient background */
+  font-family: 'Poppins', sans-serif;
+}
+
+.payment-container {
+  background: rgba(255, 255, 255, 0.95); /* Slightly more opaque for contrast */
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+  width: 100%;
+  max-width: 450px; /* Slightly wider */
+  border: 1px solid rgba(255, 204, 0, 0.2); /* Subtle border with theme color */
+  backdrop-filter: blur(5px); /* Glassmorphism effect */
+  animation: fadeIn 0.5s ease-in-out; /* Entrance animation */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.payment-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333; /* Darker text for contrast */
+  letter-spacing: 0.5px;
+  text-transform: uppercase; /* Adds a premium feel */
+}
+
+.order-id, .amount {
+  font-weight: 600;
+  color: #ff7b00; /* Keeping original orange */
+  font-size: 20px;
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(255, 123, 0, 0.1); /* Light background for emphasis */
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.payment-container p {
+  font-size: 16px;
+  color: #555; /* Softer gray for secondary text */
+  margin: 10px 0;
+}
+
+.pay-button {
+  background: #ffcc00; /* Original button color */
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 14px 25px; /* Slightly larger padding */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 25px;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase; /* Bold and premium */
+  letter-spacing: 1px;
+}
+
+/* Hover effect with a subtle shine */
+.pay-button:hover {
+  background: #ffbb00; /* Original hover color */
+  transform: translateY(-2px); /* Slight lift */
+  box-shadow: 0 4px 15px rgba(255, 187, 0, 0.4); /* Glow effect */
+}
+
+.pay-button::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(30deg);
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.pay-button:hover::after {
+  left: 100%;
+  top: 100%;
+}
+
+.pay-button:disabled {
+  background: #cccccc; /* Grayed out when disabled */
+  color: #666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.no-order {
+  font-size: 22px;
+  text-align: center;
+  color: #ff4d4d; /* Original red */
+  font-weight: 600;
+  margin-top: 60px;
+  padding: 15px 25px;
+  background: rgba(255, 77, 77, 0.1); /* Light red background */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.otp-section {
+  margin-top: 20px;
+}
+
+.otp-input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .payment-container {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .payment-container h2 {
+    font-size: 24px;
+  }
+
+  .pay-button {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  .order-id, .amount {
+    font-size: 18px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .payment-container {
+    padding: 20px;
+  }
+
+  .payment-container h2 {
+    font-size: 20px;
+  }
+
+  .pay-button {
+    font-size: 14px;
+  }
+}

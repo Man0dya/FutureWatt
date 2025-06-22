@@ -1,0 +1,79 @@
+/* About.css */
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  gap: 60px;
+}
+
+.about-text-container {
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-title {
+  font-size: 4rem;
+  background: linear-gradient(135deg, #FF5733, #FFC300, #FF5733, #FFC300);
+  background-size: 300% 300%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: textColorChange 8s ease infinite;
+}
+
+@keyframes textColorChange {
+  0% {
+    background-position: 0% 50%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background-position: 100% 50%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background-position: 0% 50%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.about-description {
+  font-size: 1.3rem;
+  color: #474747;
+  margin: 10px 0;
+}
+
+.about-tagline {
+  font-size: 2rem;
+  color: #252525;
+  margin: 10px 0;
+}
+
+.highlight-text {
+  color: red;
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+  width: 400px;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image-container {
+    margin-bottom: 20px;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+}

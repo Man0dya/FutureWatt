@@ -1,0 +1,139 @@
+.cancel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+}
+
+.cancel-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
+  animation: slideUp 0.5s ease-out;
+}
+
+.cancel-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+}
+
+.cancel-x {
+  width: 100px;
+  height: 100px;
+  stroke: #e53e3e;
+  stroke-width: 6; /* Increased from 2 to 6 */
+}
+
+.cancel-x path {
+  stroke: #e53e3e;
+  stroke-width: 8; /* Increased from 3 to 8 */
+}
+
+.cancel-icon.animate .cancel-x path:first-child {
+  animation: xStroke1 0.4s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.cancel-icon.animate .cancel-x path:last-child {
+  animation: xStroke2 0.4s cubic-bezier(0.65, 0, 0.45, 1) 0.2s forwards;
+}
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.cancel-box p {
+  color: #4a5568;
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.back-link {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #e53e3e;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.back-link:hover {
+  background: #c53030;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(229, 62, 62, 0.3);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes xStroke1 {
+  0% {
+    stroke-dasharray: 140;
+    stroke-dashoffset: 140;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes xStroke2 {
+  0% {
+    stroke-dasharray: 140;
+    stroke-dashoffset: 140;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .cancel-box {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  .cancel-box p {
+    font-size: 14px;
+  }
+  
+  .cancel-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .cancel-x {
+    width: 80px;
+    height: 80px;
+    stroke-width: 5; /* Slightly reduced but still thicker than original for mobile */
+  }
+  
+  .cancel-x path {
+    stroke-width: 6; /* Slightly reduced but still thicker than original for mobile */
+  }
+}

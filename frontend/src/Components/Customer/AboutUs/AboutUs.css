@@ -1,0 +1,482 @@
+.about-us-container {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Top Section (Image + Text) */
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 100vh; /* Increased height for a hero section */
+  margin-top: 0; /* Ensure it starts at the top */
+}
+
+.top-image {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.top-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Overlay for better text readability */
+.top-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+}
+
+.top-text {
+  width: 50%;
+  padding: 60px;
+  backdrop-filter: blur(10px);
+  z-index: 2; /* Ensure text is above the image overlay but below navbar */
+}
+
+.top-text h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ff5733, black, #ffc300, black);
+  background-size: 300% 300%;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textColorChange 16s ease infinite;
+}
+
+.top-text p {
+  font-size: 1.3rem;
+  color: #666;
+  text-align: justify;
+}
+
+/* General Section Styling */
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 3rem;
+  color: #000000;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.section h2::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background-color: #ff6600; /* Orange accent from navbar */
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Mission and Vision Section */
+.mission-section {
+  background-color: #000; /* Black background */
+  color: #fff; /* White font */
+  padding: 0; /* Remove default padding, handled by inner container */
+}
+
+.mission-vision-container {
+  padding: 40px 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mission-content,
+.vision-content {
+  text-align: left; /* Changed from center to left for overall alignment */
+  max-width: 1000px; /* Added to increase paragraph width - adjust as needed */
+  margin: 0 auto; /* Centers the content block */
+}
+
+.mission-content h2,
+.vision-content h2 {
+  color: #fff; /* White font for headings */
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-align: left; /* Align headings to left */
+}
+
+.mission-content h2::after,
+.vision-content h2::after {
+  background-color: #ff6600; /* Orange accent for the underline */
+  display: block;
+  width: 100px; /* Adjust length of underline as needed */
+  height: 2px; /* Thickness of underline */
+  content: "";
+  margin: 0; /* Remove auto margin that might center it */
+}
+
+.mission-content p,
+.vision-content p {
+  color: #fff; /* White font for paragraphs */
+  font-size: 1.2rem;
+  max-width: 100%; /* Ensures paragraph takes full width of container */
+}
+
+.mission-vision-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ff6600; /* Orange divider to match navbar accent */
+  margin: 40px 0;
+}
+
+/* Why Choose Us Section */
+.why-choose-us-section h2 {
+  background: linear-gradient(135deg, #ff5733, black, #ffc300, black);
+  background-size: 300% 300%;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textColorChange 16s ease infinite;
+}
+
+.why-choose-us-section {
+  background-color: #fff;
+}
+
+.why-choose-us-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1300px;
+  margin: 30px auto 0;
+}
+
+.why-item {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7); /* Glass effect to match navbar */
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+}
+
+.why-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow to match navbar */
+}
+
+.why-icon {
+  font-size: 4rem; /* Larger icon size */
+  color: #ff6600; /* Orange accent to match navbar */
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.why-item:hover .why-icon {
+  transform: scale(1.2); /* Slight scale effect on hover */
+}
+
+.why-item h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.why-item p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Sustainability Section */
+.sustainability-section {
+  background-color: #f9f9f9;
+  background: rgba(255, 255, 255, 0.9); /* Slight glass effect */
+  backdrop-filter: blur(5px);
+}
+
+/* Team Section (Slideshow) */
+.team-section h2 {
+  background: linear-gradient(135deg, #ff5733, black, #ffc300, black);
+  background-size: 300% 300%;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textColorChange 16s ease infinite;
+}
+
+.team-section {
+  background-color: #f9f9f9;
+}
+
+.team-slideshow {
+  position: relative;
+  max-width: 500px; /* Limit the width of the slideshow */
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.team-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
+  opacity: 1;
+}
+
+.team-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.team-slide h3 {
+  font-size: 1.7rem;
+  color: #030303;
+  margin-bottom: 10px;
+}
+
+.team-slide p {
+  font-size: 1.4rem;
+  color: #666;
+}
+
+/* Navigation Buttons */
+.slideshow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ff6600; /* Orange to match navbar */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.slideshow-btn:hover {
+  background-color: #e65c00; /* Slightly darker orange on hover */
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes textColorChange {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Initial Hidden State */
+.top-section,
+.section {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Animate Class Applied When In View */
+.animate {
+  opacity: 1;
+}
+
+/* Top Section Animation */
+.top-section.animate .top-text {
+  animation: fadeInRight 1s ease-out forwards;
+}
+
+.top-section.animate .top-image {
+  animation: fadeInLeft 1s ease-out forwards;
+}
+
+/* Mission and Vision Animation */
+.mission-section.animate .mission-content {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.mission-section.animate .vision-content {
+  animation: fadeInUp 1s ease-out forwards 0.3s; /* Slight delay for staggered effect */
+}
+
+/* Why Choose Us Animation */
+.why-item.animate {
+  animation: scaleIn 0.8s ease-out forwards;
+}
+
+/* Sustainability Section Animation */
+.sustainability-section.animate h2,
+.sustainability-section.animate p {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.sustainability-section.animate p {
+  animation-delay: 0.3s; /* Staggered effect */
+}
+
+/* Team Section Animation */
+.team-section.animate .team-slideshow {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.team-section.animate .team-slide {
+  animation: scaleIn 0.8s ease-out forwards;
+}
+
+/* Enhance Slideshow Transition */
+.team-slide {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.team-slide.active {
+  opacity: 1;
+}
+
+/* Ensure slideshow buttons remain visible */
+.slideshow-btn {
+  z-index: 10;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .top-image,
+  .top-text {
+    width: 100%;
+  }
+
+  .top-image {
+    height: 300px; /* Reduced height for mobile */
+  }
+
+  .top-text {
+    padding: 20px;
+  }
+
+  .top-text h1 {
+    font-size: 2rem;
+  }
+
+  .top-text p {
+    font-size: 1rem;
+  }
+
+  .mission-content h2,
+  .vision-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .mission-content p,
+  .vision-content p {
+    font-size: 1rem;
+  }
+
+  .why-icon {
+    font-size: 2.5rem; /* Slightly smaller icon on mobile */
+  }
+
+  .team-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .team-slide h3 {
+    font-size: 1.3rem;
+  }
+
+  .team-slide p {
+    font-size: 1rem;
+  }
+
+  .slideshow-btn {
+    padding: 8px 12px;
+    font-size: 1.2rem;
+  }
+
+  .top-section.animate .top-text,
+  .top-section.animate .top-image {
+    animation: fadeInUp 1s ease-out forwards; /* Stack vertically on mobile */
+  }
+}

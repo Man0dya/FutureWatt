@@ -1,0 +1,153 @@
+.success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+}
+
+.success-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
+  animation: slideUp 0.5s ease-out;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+}
+
+.checkmark {
+  width: 80px;
+  height: 80px;
+  stroke: #4caf50;
+  stroke-width: 2;
+}
+
+.checkmark circle {
+  stroke: #4caf50;
+  stroke-width: 2;
+}
+
+.checkmark path {
+  stroke: #4caf50;
+  stroke-width: 3;
+}
+
+.success-icon.animate .checkmark circle {
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.success-icon.animate .checkmark path {
+  animation: checkStroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.3s forwards;
+}
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.payment-details {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  margin: 20px 0;
+  border: 1px solid #e2e8f0;
+}
+
+.payment-details p {
+  margin: 10px 0;
+  color: #4a5568;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.payment-details strong {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.transaction-id {
+  display: block;
+  word-break: break-all;
+  margin-top: 5px;
+  color: #718096;
+  font-size: 13px;
+}
+
+.loading-text {
+  color: #718096;
+}
+
+.profile-link {
+  display: inline-block;
+  padding: 12px 25px;
+  background: orange;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.profile-link:hover {
+  background: darkorange;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dasharray: 157;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes checkStroke {
+  0% {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .success-box {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  .success-icon {
+    width: 60px;
+    height: 60px;
+  }
+}

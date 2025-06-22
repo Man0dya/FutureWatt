@@ -1,0 +1,221 @@
+/* Navbar Container */
+.navbar {
+  position: fixed; /* Always fixed */
+  top: 20px; /* Initial offset from the top */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 3;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.7); /* Glass effect */
+  backdrop-filter: blur(10px); /* Blurred glass effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+  z-index: 4;
+}
+
+/* Scrolled State */
+.navbar.navbar-scrolled {
+  top: 0; /* Stick to the top */
+  left: 0; /* Remove horizontal centering */
+  transform: none; /* Remove transform */
+  width: 100%; /* Full width */
+  border-radius: 0; /* Remove border radius */
+}
+
+/* Flex container */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.nav-logo {
+  height: 60px;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: 500;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  color: #000;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #ff6600;
+}
+
+/* Sign Up Button */
+.sign-up-btn {
+  background-color: orange;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.sign-up-btn:hover {
+  background-color: darkorange;
+}
+
+/* Dropdown Menu */
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Lowered dropdown */
+  left: 0;
+  background: rgba(255, 255, 255, 0.89);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style for each section */
+.dropdown-section {
+  padding: 5px 15px;
+  border-bottom: 2px solid #ddd; /* Separate sections */
+}
+
+.dropdown-section:last-child {
+  border-bottom: none; /* Remove border for last section */
+}
+
+.dropdown-section a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  display: block;
+  transition: 0.3s ease-in-out;
+  padding: 8px 0;
+}
+
+.dropdown-section a:hover {
+  color: #ff6600;
+  background: rgba(255, 102, 0, 0.1);
+}
+/* Existing CSS remains unchanged above */
+
+/* Hamburger Menu Icon */
+.nav-toggle {
+  display: none; /* Hidden by default on larger screens */
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .navbar {
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: none;
+    border-radius: 0;
+    padding: 10px;
+  }
+
+  /* Flex container adjustments */
+  .nav-container {
+    justify-content: space-between;
+    position: relative;
+  }
+
+  /* Logo adjustments */
+  .nav-logo {
+    height: 40px; /* Smaller logo for mobile */
+  }
+
+  /* Show hamburger menu icon */
+  .nav-toggle {
+    display: block;
+  }
+
+  /* Hide nav links by default on mobile */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 10px 10px;
+    gap: 20px;
+  }
+
+  /* Show nav links when active */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    display: block;
+    text-align: center;
+  }
+
+  .nav-links a {
+    font-size: 18px; /* Adjusted for mobile */
+  }
+
+  /* Dropdown adjustments for mobile */
+  .dropdown {
+    position: static;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .dropdown-section {
+    padding: 5px 10px;
+  }
+
+  /* Sign-up button adjustments */
+  .sign-up-btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
