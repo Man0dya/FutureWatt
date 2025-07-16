@@ -64,3 +64,25 @@ We’re not just writing code — we're building a cleaner, smarter, more resili
 
 ## 📁 Project Structure
 
+```
+Backend/
+  Controllers/
+  Model/
+  Route/
+  middlewares/
+  uploads/
+  Utils/
+  app.js
+  package.json
+  .env
+
+frontend/
+  public/
+  src/
+    Components/
+    index.js
+  package.json
+  .env
+  README.md
+```
+
