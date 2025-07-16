@@ -1,60 +1,66 @@
-# FutureWatt – Solar Energy Management Platform
+# 🌞 FutureWatt – Solar Energy Management Platform
 
-FutureWatt is a full-stack web application designed to streamline the management of solar energy solutions in Sri Lanka. It empowers customers and staff to manage orders, repairs, payments, and more, all through a modern, user-friendly interface.
+**Clean Energy. Smarter Living. 🍃🌍**
 
-## Features
+FutureWatt is a full-stack web application built to revolutionize the management of solar energy solutions in Sri Lanka. Designed for both customers and energy professionals, it delivers a seamless experience for ordering, servicing, financing, and maintaining solar systems — all from one smart platform.
 
-- **Customer Portal**
-  - Explore solar packages and place orders
-  - Track order status and payments
-  - Request repairs and view service reports
-  - Submit reviews and feedback
-  - Access chatbot support
+---
 
-- **Admin & Employee Management**
-  - Manage employees, packages, and customer messages
-  - Approve or reject repair and order requests
-  - View and respond to customer inquiries
+## 🚀 What We’ve Built
 
-- **Repair & Service Management**
-  - Manage repair requests and update statuses
-  - Create on-site and live installation reports (with PDF download)
-  - Track service history
+✅ Seamless customer onboarding and solar package selection  
+✅ Streamlined technician workflow with live site reporting  
+✅ Smart approval systems and transparent order tracking  
+✅ Secure Stripe-integrated payment flow with OTP verification  
+✅ Admin and employee dashboards for backend control  
+✅ Monthly salary and finance modules for internal operations  
+✅ Real customer reviews for credibility and feedback  
+✅ PDF generation for reports, invoices, and salary slips  
 
-- **Payment & Finance**
-  - Generate and email invoices (with PDF attachments)
-  - Manage employee salaries and financial records
+We’re not just writing code — we're building a cleaner, smarter, more resilient energy future.
 
-- **Sales & Marketing**
-  - Dashboard for tracking orders, repairs, and payments
-  - Manage customer reviews
+---
 
-## Tech Stack
+## 💡 Key Features
 
-- **Frontend:** React.js, Material-UI, React Router
-- **Backend:** Node.js, Express.js, MongoDB (Mongoose)
-- **Other:** Nodemailer (email), PDFKit/pdfmake (PDF generation), Axios (API calls)
+### 🧑‍💼 Customer Portal
+- Explore solar packages and place orders
+- Track order status, service requests, and payments
+- Submit reviews, feedback, and repair requests
+- Access chatbot support for instant help
 
-## Project Structure
+### 🛠️ Admin & Employee Management
+- Manage packages, employees, and customer messages
+- Approve or reject repair/order requests
+- Respond to customer inquiries in real-time
 
-```
-Backend/
-  Controllers/
-  Model/
-  Route/
-  middlewares/
-  uploads/
-  Utils/
-  app.js
-  package.json
-  .env
+### 🔧 Repair & Service Management
+- Track, assign, and manage repair jobs
+- Generate live installation & on-site service reports (PDF)
+- View complete service history
 
-frontend/
-  public/
-  src/
-    Components/
-    index.js
-  package.json
-  .env
-  README.md
-```
+### 💳 Payment & Finance
+- Generate/send invoices via email (with PDF attachment)
+- Manage salary payments and financial reports
+- Stripe integration for secure, verified transactions
+
+### 📈 Sales & Marketing
+- Dashboard insights on orders, repairs, and payments
+- Monitor and manage real customer reviews
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js, Material-UI, React Router  
+- **Backend:** Node.js, Express.js, MongoDB (Mongoose)  
+- **Other Tools:**  
+  - **Nodemailer** – Email notifications  
+  - **PDFKit / pdfmake** – PDF report/invoice generation  
+  - **Stripe** – Secure payment gateway  
+  - **Axios** – API calls  
+
+---
+
+## 📁 Project Structure
+
