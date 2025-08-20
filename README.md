@@ -8,14 +8,14 @@ FutureWatt is a full-stack web application built to revolutionize the management
 
 ## 🚀 What We’ve Built
 
-✅ Seamless customer onboarding and solar package selection  
-✅ Streamlined technician workflow with live site reporting  
-✅ Smart approval systems and transparent order tracking  
-✅ Secure Stripe-integrated payment flow with OTP verification  
-✅ Admin and employee dashboards for backend control  
-✅ Monthly salary and finance modules for internal operations  
-✅ Real customer reviews for credibility and feedback  
-✅ PDF generation for reports, invoices, and salary slips  
+ ✅ Seamless customer onboarding and solar package selection
+ ✅ Streamlined technician workflow with live site reporting  
+ ✅ Smart approval systems and transparent order tracking  
+ ✅ Secure Stripe-integrated payment flow with OTP verification  
+ ✅ Admin and employee dashboards for backend control  
+ ✅ Monthly salary and finance modules for internal operations  
+ ✅ Real customer reviews for credibility and feedback  
+ ✅ PDF generation for reports, invoices, and salary slips  
 
 We’re not just writing code — we're building a cleaner, smarter, more resilient energy future.
 
