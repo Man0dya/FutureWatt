@@ -6,6 +6,7 @@ FutureWatt is a full-stack web application built to revolutionize the management
 
 ---
 
+
 ## 🚀 What We’ve Built
 
  ✅ Seamless customer onboarding and solar package selection
