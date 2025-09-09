@@ -17,8 +17,6 @@ FutureWatt is a full-stack web application built to revolutionize the management
  ✅ Real customer reviews for credibility and feedback  
  ✅ PDF generation for reports, invoices, and salary slips  
 
-We’re not just writing code — we're building a cleaner, smarter, more resilient energy future.
-
 ---
 
 ## 💡 Key Features
@@ -85,4 +83,3 @@ frontend/
   .env
   README.md
 ```
-
