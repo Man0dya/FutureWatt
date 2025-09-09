@@ -1,6 +1,6 @@
 # 🌞 FutureWatt – Solar Energy Management Platform
 
-**Clean Energy. Smarter Living. 🍃🌍**
+** 🍃 Clean Energy. Smarter Living.🌍**
 
 FutureWatt is a full-stack web application built to revolutionize the management of solar energy solutions in Sri Lanka. Designed for both customers and energy professionals, it delivers a seamless experience for ordering, servicing, financing, and maintaining solar systems — all from one smart platform.
 
